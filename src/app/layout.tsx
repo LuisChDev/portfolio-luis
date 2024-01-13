@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Flowbite, ThemeModeScript } from "flowbite-react";
 
 import './globals.css'
 
@@ -22,13 +21,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-
       <body className={`${inter.className} bg-gray-50 dark:bg-gray-900 h-screen`}>
         <SidebarProvider>
           <Navbar />
-          <div className="mt-10 flex items-start">
+          <div className="mt-10 flex items-start w-screen">
+            <div className="w-16" /> {/* padding for the sidebar */}
             <Sidebar />
-            {children}
+
+            <div className="grow flex">
+              {children}
+            </div>
           </div>
         </SidebarProvider>
       </body>
