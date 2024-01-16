@@ -1,13 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // i18n: {
+  //   locales: ['en', 'es'],
+  //   defaultLocale: 'en',
+  // },
   headers: async () => {
     return [
       {
-        source: "/public/gameBuild/Build/:slug",
+        source: "/Build/build.framework.js.gz",
         headers: [
           {
             key: "Content-Encoding",
-            value: "br"
+            value: "gzip"
           }
         ]
       }

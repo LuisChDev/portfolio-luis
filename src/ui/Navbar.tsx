@@ -3,7 +3,8 @@ import { DarkThemeToggle, Navbar } from "flowbite-react";
 import Image from "next/image";
 import { HiX, HiMenu } from "react-icons/hi";
 
-import { useSidebarContext } from"@/lib/SidebarContext";
+import { useSidebarContext } from "@/lib/SidebarContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function AppNavbar() {
   const { isSidebarOpen, setSidebarOpen } = useSidebarContext();
@@ -49,7 +50,10 @@ export default function AppNavbar() {
               </Navbar.Brand>
             </div>
 
-            <DarkThemeToggle />
+            <div className="flex text-stone-900">
+              <LanguageSwitcher />
+              <DarkThemeToggle />
+            </div>
 
           </div>
         </div>
