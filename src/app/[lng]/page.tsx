@@ -38,7 +38,7 @@ export default function Home({ params }: { params: { lng: any } }) {
     <div className="z-10 flex flex-col grow">
       <section className="-z-10 p-6 h-screen" ref={vantaRef}>
         <h1 className="text-5xl font-extrabold dark:text-stone-200">
-          Websites done right.
+          
         </h1>
 
       </section>

@@ -3,6 +3,11 @@ export const languages = ["en", "es"];
 export const cookieName = "language";
 export const defaultNS = "translation";
 
+export const languageNames: { [key: string]: string; } = ({
+  en: "English",
+  es: "Español"
+});
+
 export const getOptions = (lng = fallbackLng, ns = defaultNS) => {
   return ({
     supportedLngs: languages,

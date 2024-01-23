@@ -42,7 +42,7 @@ export default async function RootLayout({
         className={`${inter.className} bg-gray-50 dark:bg-gray-900 h-screen`}
       >
         <SidebarProvider>
-          <Navbar />
+          <Navbar {...{lng}} />
           <div className="mt-10 flex items-start w-screen">
             <div className="w-16 shrink-0" /> {/* padding for the sidebar */}
             <Sidebar />

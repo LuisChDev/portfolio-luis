@@ -6,7 +6,7 @@ import { HiX, HiMenu } from "react-icons/hi";
 import { useSidebarContext } from "@/lib/SidebarContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-export default function AppNavbar() {
+export default ({ lng }: {lng: string}) => {
   const { isSidebarOpen, setSidebarOpen } = useSidebarContext();
 
   return (
@@ -51,7 +51,7 @@ export default function AppNavbar() {
             </div>
 
             <div className="flex text-stone-900">
-              <LanguageSwitcher />
+              <LanguageSwitcher {...{lng}} />
               <DarkThemeToggle />
             </div>
 
