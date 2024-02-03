@@ -46,7 +46,7 @@ export default async function RootLayout({
           <div className="mt-10 flex items-start w-screen">
             <div className="w-16 shrink-0" /> {/* padding for the sidebar */}
             <Sidebar />
-            <div className="grow flex">{children}</div>
+            <div className="grow flex z-0">{children}</div>
           </div>
         </SidebarProvider>
       </body>

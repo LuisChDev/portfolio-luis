@@ -5,7 +5,7 @@ import { Button, Label, Textarea, TextInput } from "flowbite-react";
 import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import ExperienceCard from "../../../ui/ExperienceCard";
+import { Gama, Encora } from "../../../ui/ExperienceCard";
 
 const Contact = () => {
   const captchaRef = useRef(null);
@@ -48,8 +48,6 @@ const Contact = () => {
       <div className="text-xl">
         I'd be happy to hear from you. Please fill in the form below:
       </div>
-
-      <ExperienceCard />
 
       <form
         onSubmit={formik.handleSubmit}

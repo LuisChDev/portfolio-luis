@@ -6,6 +6,8 @@ import * as THREE from "three";
 // @ts-ignore
 import GLOBE from 'vanta/dist/vanta.globe.min.js';
 
+import { Gama, Encora, TomorrowTech } from "@/ui/ExperienceCard";
+
 // dummy type for vanta
 interface VantaEffect { destroy: () => void };
 
@@ -38,9 +40,8 @@ export default function Home({ params }: { params: { lng: any } }) {
     <div className="z-10 flex flex-col grow">
       <section className="-z-10 p-6 h-screen" ref={vantaRef}>
         <h1 className="text-5xl font-extrabold dark:text-stone-200">
-          
+          Websites done right.
         </h1>
-
       </section>
 
       <section className="p-6 h-screen" id="whoiam">
@@ -48,7 +49,6 @@ export default function Home({ params }: { params: { lng: any } }) {
           These are some of my skills, either from work or explored out of
           curiosity.
         </div>
-
       </section>
 
       <section className="p-6 h-screen" id="experience">
@@ -57,34 +57,10 @@ export default function Home({ params }: { params: { lng: any } }) {
             take a look at some of the things I've done.
           </div>
           <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-            <Carousel>
-              <Card className="max-w-sm">
-                <h5 className="text-2xl font-bold trancking-tight dark:text-stone-200">
-                  Aduanas Gama S.A.S. Ingeniero programador
-                </h5>
-                <p className="font-normal dark:text-stone-300">
-                  In charge of developing a React Native & React Web application.
-                </p>
-              </Card>
-
-              <Card className="max-w-sm">
-                <h5 className="text-2xl font-bold trancking-tight dark:text-stone-200">
-                  Encora LLC - Senior Software Engineer
-                </h5>
-                <p className="font-normal dark:text-stone-300">
-                  Front-end development using React, Formik, Bootstrap and other
-                  modern JS stack technologies.
-                </p>
-              </Card>
-
-              <Card className="max-w-sm">
-                <h5 className="text-2xl font-bold trancking-tight dark:text-stone-200">
-                  Tomorrow Tech S.A.S. Software developer
-                </h5>
-                <p className="font-normal dark:text-stone-300">
-                  customer relationships, front-end and cloud developement & admin
-                </p>
-              </Card>
+            <Carousel slide>
+              {Gama}
+              {Encora}
+              {TomorrowTech}
             </Carousel>
           </div>
         </div>

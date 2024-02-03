@@ -6,7 +6,7 @@ import { HiX, HiMenu } from "react-icons/hi";
 import { useSidebarContext } from "@/lib/SidebarContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-export default ({ lng }: {lng: string}) => {
+export default ({ lng }: { lng: string }) => {
   const { isSidebarOpen, setSidebarOpen } = useSidebarContext();
 
   return (

@@ -1,4 +1,5 @@
 "use client";
+
 import { createContext, useContext, useEffect, useState } from "react";
 import type { FC, PropsWithChildren } from "react";
 import { isBrowser, isSmallScreen } from "@/lib/utils";

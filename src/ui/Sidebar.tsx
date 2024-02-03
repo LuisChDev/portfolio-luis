@@ -16,7 +16,7 @@ const AppSidebar: FC = () => {
   return (
     <Sidebar
       className={twMerge(
-        "ease-in-out duration-300 fixed inset-y-0 left-0 z-30 mt-16 flex " +
+        "ease-in-out duration-300 fixed inset-y-0 left-0 z-10 mt-16 flex " +
         "h-full shrink-0 flex-col border-r border-gray-200 " +
         "dark:border-gray-700 lg:flex"
       )}
