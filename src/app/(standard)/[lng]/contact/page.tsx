@@ -5,8 +5,6 @@ import { Button, Label, Textarea, TextInput } from "flowbite-react";
 import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { Gama, Encora } from "../../../ui/ExperienceCard";
-
 const Contact = () => {
   const captchaRef = useRef(null);
   const formik = useFormik({

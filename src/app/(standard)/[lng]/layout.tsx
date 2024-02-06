@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { dir } from "i18next";
-import { useTranslation } from "../i18n";
+import { useTranslation } from "../../i18n";
 
 import "./globals.css";
 
@@ -9,7 +9,7 @@ import Navbar from "@/ui/Navbar";
 import Sidebar from "@/ui/Sidebar";
 import { SidebarProvider } from "@/lib/SidebarContext";
 
-import { languages } from "../i18n/settings";
+import { languages } from "../../i18n/settings";
 
 export const generateStaticParams = async () => {
   return languages.map((lng) => ({ lng }));
@@ -44,7 +44,7 @@ export default async function RootLayout({
         <SidebarProvider>
           <Navbar {...{lng}} />
           <div className="mt-10 flex items-start w-screen">
-            <div className="w-16 shrink-0" /> {/* padding for the sidebar */}
+            <div className="w-16 md:shrink-0" /> {/* padding for the sidebar */}
             <Sidebar />
             <div className="grow flex z-0">{children}</div>
           </div>

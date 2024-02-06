@@ -8,23 +8,22 @@ import { HiMiniWrenchScrewdriver } from "react-icons/hi2";
 import { IoIosMail, IoLogoGameControllerA } from "react-icons/io";
 
 import { useSidebarContext } from "@/lib/SidebarContext";
+import { isSmallScreen } from "@/lib/utils";
 
 const AppSidebar: FC = () => {
   const { isSidebarOpen } = useSidebarContext();
 
-  /* !isSidebarOpen && "opacity-0" */
+  /* isSmallScreen && "-left-16 md:left-0" */
   return (
     <Sidebar
       className={twMerge(
-        "ease-in-out duration-300 fixed inset-y-0 left-0 z-10 mt-16 flex " +
-        "h-full shrink-0 flex-col border-r border-gray-200 " +
-        "dark:border-gray-700 lg:flex"
+        "fixed inset-y-0 left-0 z-10 mt-16 flex h-full shrink-0 flex-col border-r border-gray-200 duration-75 dark:border-gray-700 lg:flex",
+        !isSidebarOpen && "hidden w-16",
       )}
       aria-label="sidebar for site navigation."
       id="sidebar"
       collapsed={!isSidebarOpen}
     >
-
       <div className="mt-10">
         <Sidebar.Items>
           <Sidebar.ItemGroup>  {/* sections on landing */}
