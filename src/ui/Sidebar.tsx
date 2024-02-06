@@ -18,7 +18,7 @@ const AppSidebar: FC = () => {
     <Sidebar
       className={twMerge(
         "fixed inset-y-0 left-0 z-10 mt-16 flex h-full shrink-0 flex-col border-r border-gray-200 duration-75 dark:border-gray-700 lg:flex",
-        !isSidebarOpen && "hidden w-16",
+        !isSidebarOpen && "hidden w-16 md:flex",
       )}
       aria-label="sidebar for site navigation."
       id="sidebar"
