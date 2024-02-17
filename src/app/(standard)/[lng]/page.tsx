@@ -1,6 +1,7 @@
 "use client";
+
 import { useEffect, useState, useRef } from 'react';
-import { Carousel, Card } from 'flowbite-react';
+import { Card } from 'flowbite-react';
 import { Variants, motion } from "framer-motion";
 
 import * as THREE from "three";
@@ -8,6 +9,8 @@ import * as THREE from "three";
 import GLOBE from 'vanta/dist/vanta.globe.min.js';
 
 import { Gama, Encora, TomorrowTech } from "@/ui/ExperienceCard";
+import Carousel from "@/ui/HomeCarousel";
+import CardGrid from "@/ui/CardGrid";
 
 // dummy type for vanta
 interface VantaEffect { destroy: () => void };
@@ -76,7 +79,7 @@ export default function Home({ params }: { params: { lng: any } }) {
         </h1>
       </section>
 
-      <section className="p-6 h-fit flex flex-col justify-center" id="whoiam">
+      <section className="p-6 h-fit flex flex-col justify-center dark:bg-stone-700" id="whoiam">
         <div className="mt-10 mb-10 flex justify-center dark:text-stone-200">
           <Card className="md:w-2/5">
             <h1 className="text-4xl font-bold dark:text-stone-200">Hello. I'm Luis.</h1>
@@ -91,37 +94,28 @@ export default function Home({ params }: { params: { lng: any } }) {
         </div>
       </section>
 
-      <section className="p-6 h-screen" id="experience">
-        <div className="flex flex-col">
-          <motion.div
-            className="dark:text-stone-200"
-            initial="hide"
-            whileInView="show"
-            exit="hide"
-            variants={introHeaderVariants}
-          >
+      <section className="flex flex-col items-center p-6 h-screen" id="experience">
+        <div className="flex flex-col w-full h-2/3">
+        <Carousel className="" slide={false}>
+          {Gama}
+          {Encora}
+          {TomorrowTech}
+        </Carousel>
+          <div className="md:m-auto">
             take a look at some of the things I've done.
-          </motion.div>
-          <motion.div
-            className="h-56 sm:h-64 xl:h-80 2xl:h-96"
-            initial="hide"
-            whileInView="show"
-            exit="hide"
-            variants={introExperienceVariants}
-          >
-            <Carousel slide={false}>
-              {Gama}
-              {Encora}
-              {TomorrowTech}
-            </Carousel>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="h-screen" id="skills">
-        <div className="dark:text-stone-200">
-          These are some of my skills, either from work or explored out of
-          curiosity.
+      <section className="p-5 dark:text-white dark:bg-gray-700" id="skills">
+        <div className="flex flex-col md:flex-row items-center h-full">
+          <Card className="md:w-64">
+            These are some of my skills, either from work or explored out of
+            curiosity.
+          </Card>
+          <div className="p-5 grow">
+            <CardGrid cardArray={[]} />
+          </div>
         </div>
       </section>
     </div>

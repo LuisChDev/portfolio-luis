@@ -13,10 +13,13 @@ export default ({ lng }: { lng: string }) => {
     <header>
       <Navbar
         fluid
-        className="fixed top-0 z-20 w-full border-b border-gray-200 bg-white p-0
-        dark:border-gray-700 dark:bg-gray-800 sm:p-0"
+        className="fixed top-0 z-20 w-full border-b border-gray-200 p-0
+                   bg-white
+                   dark:border-gray-700 dark:bg-gray-800
+                   sm:p-0"
       >
-        <div className="p-3 w-full pr-4">
+
+        <div className="w-full pr-4">
           <div className="flex items-center justify-between">
 
             <div className="flex items-center">

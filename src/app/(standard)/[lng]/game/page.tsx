@@ -36,6 +36,9 @@ const AppGame: FC = () => {
             Loading... {Math.round(loadingProgression * 100)}%
           </p>
         )}
+        <div className="md:hidden">
+          This div should only show up on phone screens.
+        </div>
         <div className="border-2 border-stone-200 p-2">
           use WASD to move, the mouse to look around, and left click to swing
           your hammer. Hold shift to sprint. Try to find and destroy all the

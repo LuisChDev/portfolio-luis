@@ -17,23 +17,23 @@ const AppSidebar: FC = () => {
   return (
     <Sidebar
       className={twMerge(
-        "fixed inset-y-0 left-0 z-10 mt-16 flex h-full shrink-0 flex-col border-r border-gray-200 duration-75 dark:border-gray-700 lg:flex",
+        "fixed inset-y-0 left-0 z-10 mt-10 flex h-full shrink-0 flex-col border-r border-gray-200 duration-75 dark:border-gray-700 lg:flex",
         !isSidebarOpen && "hidden w-16 md:flex",
       )}
       aria-label="sidebar for site navigation."
       id="sidebar"
       collapsed={!isSidebarOpen}
     >
-      <div className="mt-10">
+      <div className="mt-0">
         <Sidebar.Items>
           <Sidebar.ItemGroup>  {/* sections on landing */}
-            <Sidebar.Item href="/" icon={HiHome}>
+            <Sidebar.Item href="#" icon={HiHome}>
               Start
             </Sidebar.Item>
             <Sidebar.Item href="#experience" icon={HiLightBulb}>
               Experience
             </Sidebar.Item>
-            <Sidebar.Item href="/" icon={HiMiniWrenchScrewdriver}>
+            <Sidebar.Item href="#skills" icon={HiMiniWrenchScrewdriver}>
               Skills
             </Sidebar.Item>
           </Sidebar.ItemGroup>
