@@ -56,9 +56,9 @@ export default function Home({ params }: { params: { lng: string } }) {
       </section>
 
       <section className="p-6 h-fit flex flex-col justify-center dark:bg-stone-700" id="whoiam">
-        <div className="mt-10 mb-10 flex justify-center dark:text-stone-200">
+        <div className="mt-10 mb-10 flex justify-center text-black dark:text-stone-200">
           <Card className="md:w-2/5">
-            <h1 className="text-4xl font-bold dark:text-stone-200">{t("aboutTitle")}</h1>
+            <h1 className="text-4xl font-bold text-black dark:text-stone-200">{t("aboutTitle")}</h1>
             <p>
               {t("aboutDescription")}
             </p>
@@ -73,13 +73,13 @@ export default function Home({ params }: { params: { lng: string } }) {
           {Encora}
           {TomorrowTech}
         </Carousel>
-          <div className="md:m-auto">
+          <div className="text-black dark:text-stone-200 md:m-auto">
             {t("experienceDescription")}
           </div>
         </div>
       </section>
 
-      <section className="p-5 dark:text-white dark:bg-gray-700" id="skills">
+      <section className="p-5 text-black dark:text-white dark:bg-gray-700" id="skills">
         <div className="flex flex-col md:flex-row items-center h-full">
           <Card className="md:w-64">
             {t("skillsDescription")}

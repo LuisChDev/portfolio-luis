@@ -1,3 +1,9 @@
 {
-  "description": "I'd be happy to hear from you. Please fill in the form below:"
+  "description": "I'd be happy to hear from you. Please fill in the form below:",
+  "contactEmail": "Your Email",
+  "contactEmailPlaceholder": "name@email.com",
+  "contactSubject": "Subject",
+  "contactMessage": "Your Message",
+  "contactMessagePlaceholder": "leave your message here...",
+  "submit": "Submit"
 }

@@ -17,10 +17,10 @@ const cards: { [key: string]: CardData } = {
     imgSrc: gamaImage3.src,
     description: (
       <>
-        <h5 className="font-bold dark:text-stone-200">
+        <h5 className="font-bold text-black dark:text-stone-200">
           Agencia de Aduanas Gama S.A.S.
         </h5>
-        <p className="font-normal dark:text-stone-200">
+        <p className="font-normal text-black dark:text-stone-200">
           <span className="font-bold">Cargo: </span>
           Desarrollo y mantenimiento de aplicación móvil (React Native).
         </p>
@@ -33,8 +33,8 @@ const cards: { [key: string]: CardData } = {
     imgSrc: encoraImage.src,
     description: (
       <>
-        <h5 className="font-bold dark:text-stone-200">Encora LLC</h5>
-        <p className="font-normal dark:text-stone-200">
+        <h5 className="font-bold text-black dark:text-stone-200">Encora LLC</h5>
+        <p className="font-normal text-black dark:text-stone-200">
           <span className="font-bold">Cargo: </span>
           Desarrollo de componentes en React. Pruebas unitarias, code reviews y
           pruebas e2e.
@@ -48,8 +48,8 @@ const cards: { [key: string]: CardData } = {
     imgSrc: tomorrowImage.src,
     description: (
       <>
-        <h5 className="font-bold dark:text-stone-200">Tomorrow Tech S.A.S.</h5>
-        <p className="font-normal dark:text-stone-200">
+        <h5 className="font-bold text-black dark:text-stone-200">Tomorrow Tech S.A.S.</h5>
+        <p className="font-normal text-black dark:text-stone-200">
           <span className="font-bold">Cargo: </span>
           Desarrollo de aplicaciones en React. Despliegues en la nube con AWS.
           Manejo de DNS. Interacción con el cliente y levantamiento de requerimientos.

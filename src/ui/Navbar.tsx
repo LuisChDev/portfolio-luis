@@ -47,7 +47,7 @@ export default ({ lng }: { lng: string }) => {
                   className="md:ml-2"
                 />
                 <span className="self-center whitespace-nowrap px-1 md:px-3 text-xl
-                font-semibold dark:text-white">
+                font-semibold text-black dark:text-white">
                   <span>Luis</span> <span>Chavarriaga</span>
                 </span>
               </Navbar.Brand>

@@ -24,7 +24,7 @@ const SkillCard = ({
   bgColor: string;
   description: ReactNode;
 }) => (
-  <div className="w-fit my-2 transform transition duration-400 hover:scale-125 active:scale-125">
+  <div className="w-fit my-2 transform transition duration-400 hover:scale-125 text-black dark:text-stone-200 active:scale-125">
     <Card
       renderImage={() => {
         return (
@@ -48,8 +48,7 @@ export default function CardGrid({ cardArray }: { cardArray: ReactNode[] }) {
         bgColor="bg-teal-500"
         description={
           <div>
-            <h1>React</h1>
-            <p>Components</p>
+            React
           </div>
         }
       />

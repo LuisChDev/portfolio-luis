@@ -1,8 +1,9 @@
 {
   "description": "Si desea contactarme por favor llene el formulario a continuación:",
-  "contactEmail": "",
-  "contactEmailPlaceholder": "",
-  "contactSubject": "",
-  "contactMessage": "",
-  "contactMessagePlaceholder": ""
+  "contactEmail": "Su correo",
+  "contactEmailPlaceholder": "nombre@correo.com",
+  "contactSubject": "Asunto",
+  "contactMessage": "Su mensaje",
+  "contactMessagePlaceholder": "Escriba su mensaje aquí...",
+  "submit": "Enviar"
 }

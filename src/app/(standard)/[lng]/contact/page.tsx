@@ -5,7 +5,10 @@ import { Button, Label, Textarea, TextInput } from "flowbite-react";
 import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Contact = () => {
+import { useTranslation } from "@/app/i18n/client";
+
+const Contact = ({ params }: { params: { lng: string; }}) => {
+  const { t } = useTranslation(params.lng, "contact");
   const captchaRef = useRef(null);
   const formik = useFormik({
     initialValues: {
@@ -42,9 +45,9 @@ const Contact = () => {
   });
 
   return (
-    <div className="h-screen p-6 dark:text-stone-200">
+    <div className="h-screen p-6 text-black dark:text-stone-200">
       <div className="text-xl">
-        I'd be happy to hear from you. Please fill in the form below:
+        {t("description")}
       </div>
 
       <form
@@ -54,12 +57,12 @@ const Contact = () => {
       >
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="email1" value="Your Email" />
+            <Label htmlFor="email1" value={t("contactEmail")} />
           </div>
           <TextInput
             id="email1"
             type="email"
-            placeholder="name@email.com"
+            placeholder={t("contactEmailPlaceholder")}
             required
             value={formik.values.email1}
             onChange={formik.handleChange}
@@ -68,7 +71,7 @@ const Contact = () => {
 
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="subject1" value="Subject" />
+            <Label htmlFor="subject1" value={t("contactSubject")} />
           </div>
           <TextInput
             id="subject1"
@@ -80,11 +83,11 @@ const Contact = () => {
 
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="message1" value="Your Message" />
+            <Label htmlFor="message1" value={t("contactMessage")} />
           </div>
           <Textarea
             id="message1"
-            placeholder="leave your message here..."
+            placeholder={t("contactMessagePlaceholder")}
             rows={4}
             required
             value={formik.values.message1}
@@ -93,10 +96,11 @@ const Contact = () => {
         </div>
 
         <ReCAPTCHA
+          hl={params.lng}
           ref={captchaRef}
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "default"}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">{t("submit")}</Button>
       </form>
     </div>
   );
