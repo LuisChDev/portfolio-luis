@@ -19,12 +19,12 @@ export default ({ lng }: { lng: string }) => {
                    sm:p-0"
       >
 
-        <div className="w-full pr-4">
+        <div className="w-full md:pr-4">
           <div className="flex items-center justify-between">
 
             <div className="flex items-center">
               <button
-                className="ml-3 mr-2 cursor-pointer rounded p-2 text-gray-600
+                className="ml-3 md:mr-2 cursor-pointer rounded p-2 text-gray-600
                 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100
                 focus:ring-2 focus:ring-gray-100 dark:text-gray-400
                 dark:hover:bg-gray-700 dark:hover:text-white
@@ -38,17 +38,17 @@ export default ({ lng }: { lng: string }) => {
                 {isSidebarOpen ? <HiX className="w-6 h-6" /> : <HiMenu className="w-6 h-6" />}
               </button>
 
-              <Navbar.Brand className="ml-4">
+              <Navbar.Brand className="md:ml-4">
                 <Image
                   alt="Luis Logo"
                   src="/favicon.ico"
                   height="24"
                   width="24"
-                  className="ml-2"
+                  className="md:ml-2"
                 />
-                <span className="self-center whitespace-nowrap px-3 text-xl
+                <span className="self-center whitespace-nowrap px-1 md:px-3 text-xl
                 font-semibold dark:text-white">
-                  Luis Chavarriaga
+                  <span>Luis</span> <span>Chavarriaga</span>
                 </span>
               </Navbar.Brand>
             </div>

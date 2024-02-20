@@ -1,7 +1,7 @@
 import { Card } from "flowbite-react";
-import gamaImage3 from "../../public/logogama2.png";
-import encoraImage from "../../public/Encora.jpg";
-import tomorrowImage from "../../public/Tomorrow-Tech.png";
+import gamaImage3 from "../../public/files/logogama2.png";
+import encoraImage from "../../public/files/Encora.jpg";
+import tomorrowImage from "../../public/files/Tomorrow-Tech.png";
 
 import type { ReactNode } from "react";
 

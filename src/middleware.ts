@@ -21,7 +21,9 @@ export const middleware = (req: NextRequest) => {
 
   if (
     !languages.some(loc => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
-    !req.nextUrl.pathname.startsWith('/_next')
+    !req.nextUrl.pathname.startsWith('/_next') &&
+    !req.nextUrl.pathname.startsWith('/files') &&  // everything on public folder will start with this
+    !req.nextUrl.pathname.startsWith('/favicon.ico')
   ) return NextResponse.redirect(new URL(`/${lng}${req.nextUrl.pathname}`, req.url));
 
   if (req.headers.has('referer')) {

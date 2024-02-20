@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { dir } from "i18next";
+import { ThemeModeScript } from "flowbite-react";
 
 import "./globals.css";
 
@@ -36,20 +37,24 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lng: string };
 }) {
+
   return (
     <html lang={lng} dir={dir(lng)}>
+      <head>
+        <ThemeModeScript />
+      </head>
       <body
         className={`${inter.className} bg-gray-50 dark:bg-gray-900 h-screen`}
       >
-          <SidebarProvider>
-            <Navbar {...{ lng }} />
-            <div className="mt-10 flex items-start w-screen">
-              <div className="md:w-16 md:shrink-0" /> {/* padding for the sidebar */}
-              <Sidebar />
-              <div className="grow flex z-0">{children}</div>
-            </div>
-            <Footer />
-          </SidebarProvider>
+        <SidebarProvider>
+          <Navbar {...{ lng }} />
+          <div className="mt-10 flex items-start w-screen">
+            <div className="md:w-16 md:shrink-0" /> {/* padding for the sidebar */}
+            <Sidebar />
+            <div className="grow flex z-0">{children}</div>
+          </div>
+          <Footer />
+        </SidebarProvider>
       </body>
     </html>
   );

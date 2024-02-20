@@ -42,14 +42,14 @@ const Contact = () => {
   });
 
   return (
-    <div className="p-6 dark:text-stone-200">
+    <div className="h-screen p-6 dark:text-stone-200">
       <div className="text-xl">
         I'd be happy to hear from you. Please fill in the form below:
       </div>
 
       <form
         onSubmit={formik.handleSubmit}
-        className="flex max-w-md flex-col gap-4 border-2
+        className="flex max-w-xs md:max-w-md flex-col gap-4 border-2
          dark:border-stone-200 p-6 mt-6 rounded-xl"
       >
         <div>

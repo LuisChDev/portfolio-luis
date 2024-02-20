@@ -1,6 +1,6 @@
 export const fallbackLng = "en";
 export const languages = ["en", "es"];
-export const cookieName = "language";
+export const cookieName = "i18next";
 export const defaultNS = "translation";
 
 export const languageNames: { [key: string]: string; } = ({

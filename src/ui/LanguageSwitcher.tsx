@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { Dropdown, DropdownItem } from "flowbite-react";
 import "flag-icons/css/flag-icons.min.css";
+import "./LanguageSwitcher.css";
 
 import { languages, languageNames } from "../app/i18n/settings";
 

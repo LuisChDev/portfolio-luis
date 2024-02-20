@@ -1,17 +1,17 @@
 import type { ReactNode } from "react";
 import { Card } from "flowbite-react";
 
-import reactLogo from "../../public/react-logo.png";
-import nodeLogo from "../../public/node-logo.png";
-import bootstrapLogo from "../../public/bootstrap-logo.png";
-import vueLogo from "../../public/vue-logo.png";
-import nixosLogo from "../../public/nixos-logo.png";
-import awsLogo from "../../public/aws-logo.png";
-import tailwindLogo from "../../public/tailwind-logo2.png";
-import nextLogo from "../../public/nextjs-logo.png";
-import reduxLogo from "../../public/redux-logo.png";
-import graphqlLogo from "../../public/graphql-logo.png";
-import pythonLogo from "../../public/python-logo.png";
+import reactLogo from "../../public/files/react-logo.png";
+import nodeLogo from "../../public/files/node-logo.png";
+import bootstrapLogo from "../../public/files/bootstrap-logo.png";
+import vueLogo from "../../public/files/vue-logo.png";
+import nixosLogo from "../../public/files/nixos-logo.png";
+import awsLogo from "../../public/files/aws-logo.png";
+import tailwindLogo from "../../public/files/tailwind-logo2.png";
+import nextLogo from "../../public/files/nextjs-logo.png";
+import reduxLogo from "../../public/files/redux-logo.png";
+import graphqlLogo from "../../public/files/graphql-logo.png";
+import pythonLogo from "../../public/files/python-logo.png";
 
 const SkillCard = ({
   imgSrc,

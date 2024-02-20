@@ -4,27 +4,26 @@ import { FC, useState, useEffect } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 const AppGame: FC = () => {
-  const [isLandscape, setIsLandscape] = useState(
-    window.innerWidth > window.innerHeight,
-  );
+  const [isLandscape, setIsLandscape] = useState(false);
   useEffect(() => {
     const handleOrientationChange = () => {
       setIsLandscape(window.innerWidth > window.innerHeight);
     };
 
+    handleOrientationChange();
     window.addEventListener("resize", handleOrientationChange);
     return () => window.removeEventListener("resize", handleOrientationChange);
   }, []);
 
   const { unityProvider, loadingProgression, isLoaded } = useUnityContext({
-    loaderUrl: "/Build/build.loader.js",
-    dataUrl: "/Build/build.data",
-    frameworkUrl: "/Build/build.framework.js",
-    codeUrl: "/Build/build.wasm",
+    loaderUrl: "/files/Build/build.loader.js",
+    dataUrl: "/files/Build/build.data",
+    frameworkUrl: "/files/Build/build.framework.js",
+    codeUrl: "/files/Build/build.wasm",
   });
 
   return (
-    <div className="m-16 w-full h-full flex flex-col sm:flex-row">
+    <div className="m-16 w-full h-screen flex flex-col sm:flex-row">
       {isLandscape ? (
         <Unity className="w-full h-full" unityProvider={unityProvider} />
       ) : (
