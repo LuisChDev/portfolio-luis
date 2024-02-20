@@ -1,17 +1,17 @@
 "use client";
-import { DarkThemeToggle, Navbar } from "flowbite-react";
+import { DarkThemeToggle, Navbar as BaseNavbar } from "flowbite-react";
 import Image from "next/image";
 import { HiX, HiMenu } from "react-icons/hi";
 
 import { useSidebarContext } from "@/lib/SidebarContext";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-export default ({ lng }: { lng: string }) => {
+const Navbar = ({ lng }: { lng: string }) => {
   const { isSidebarOpen, setSidebarOpen } = useSidebarContext();
 
   return (
     <header>
-      <Navbar
+      <BaseNavbar
         fluid
         className="fixed top-0 z-20 w-full border-b border-gray-200 p-0
                    bg-white
@@ -38,7 +38,7 @@ export default ({ lng }: { lng: string }) => {
                 {isSidebarOpen ? <HiX className="w-6 h-6" /> : <HiMenu className="w-6 h-6" />}
               </button>
 
-              <Navbar.Brand className="md:ml-4">
+              <BaseNavbar.Brand className="md:ml-4">
                 <Image
                   alt="Luis Logo"
                   src="/favicon.ico"
@@ -50,7 +50,7 @@ export default ({ lng }: { lng: string }) => {
                 font-semibold text-black dark:text-white">
                   <span>Luis</span> <span>Chavarriaga</span>
                 </span>
-              </Navbar.Brand>
+              </BaseNavbar.Brand>
             </div>
 
             <div className="flex text-stone-900">
@@ -60,7 +60,9 @@ export default ({ lng }: { lng: string }) => {
 
           </div>
         </div>
-      </Navbar>
+      </BaseNavbar>
     </header>
   )
 };
+
+export default Navbar;

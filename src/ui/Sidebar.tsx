@@ -58,7 +58,7 @@ const AppSidebar: FC = () => {
             {" "}
             {/* other pages */}
             <Sidebar.Item href="/game" icon={IoLogoGameControllerA}>
-              Let's play!
+              Let&apos;s play!
             </Sidebar.Item>
             <Sidebar.Item href="/contact" icon={IoIosMail}>
               Contact me

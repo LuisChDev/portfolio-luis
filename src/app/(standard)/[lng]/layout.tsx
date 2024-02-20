@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import React from "react";
 import { Inter } from "next/font/google";
 import { dir } from "i18next";
 import { ThemeModeScript } from "flowbite-react";
@@ -23,6 +23,7 @@ export const generateMetadata = async ({
 }: {
   params: { lng: string };
 }) => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { t } = await useTranslation(lng, "metadata");
   return {
     title: t("title"),

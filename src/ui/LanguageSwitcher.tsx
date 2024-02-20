@@ -6,14 +6,14 @@ import { Dropdown, DropdownItem } from "flowbite-react";
 import "flag-icons/css/flag-icons.min.css";
 import "./LanguageSwitcher.css";
 
-import { languages, languageNames } from "../app/i18n/settings";
+import { languageNames } from "../app/i18n/settings";
 
 const flags: { [key: string]: ReactNode } = {
   en: <span className="fi fi-gb" />,
   es: <span className="fi fi-es" />
 };
 
-export default ({ lng }: { lng: string }) => {
+const LanguageSwitcher = ({ lng }: { lng: string }) => {
   const path = usePathname();
   const router = useRouter();
   const setLang = (lang: string) => {
@@ -27,3 +27,5 @@ export default ({ lng }: { lng: string }) => {
     </Dropdown>
   );
 };
+
+export default LanguageSwitcher;

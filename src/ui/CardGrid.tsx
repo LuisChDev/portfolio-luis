@@ -3,8 +3,6 @@ import { Card } from "flowbite-react";
 
 import reactLogo from "../../public/files/react-logo.png";
 import nodeLogo from "../../public/files/node-logo.png";
-import bootstrapLogo from "../../public/files/bootstrap-logo.png";
-import vueLogo from "../../public/files/vue-logo.png";
 import nixosLogo from "../../public/files/nixos-logo.png";
 import awsLogo from "../../public/files/aws-logo.png";
 import tailwindLogo from "../../public/files/tailwind-logo2.png";
@@ -39,7 +37,7 @@ const SkillCard = ({
   </div>
 );
 
-export default function CardGrid({ cardArray }: { cardArray: ReactNode[] }) {
+export default function CardGrid() {
   return (
     <div className="flex flex-col md:grid md:grid-cols-3 md:gap-2">
       <SkillCard

@@ -85,7 +85,7 @@ export default function Home({ params }: { params: { lng: string } }) {
             {t("skillsDescription")}
           </Card>
           <div className="p-5 grow">
-            <CardGrid cardArray={[]} />
+            <CardGrid />
           </div>
         </div>
       </section>
