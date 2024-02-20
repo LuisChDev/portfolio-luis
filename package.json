@@ -11,10 +11,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@aws-amplify/adapter-nextjs": "^1.0.17",
     "@types/nodemailer": "^6.4.14",
     "@types/react-google-recaptcha": "^2.1.8",
     "@types/three": "^0.160.0",
     "accept-language": "^3.0.18",
+    "aws-amplify": "^6.0.17",
     "daisyui": "^4.4.20",
     "dotenv": "^16.3.1",
     "flag-icons": "^7.1.0",
