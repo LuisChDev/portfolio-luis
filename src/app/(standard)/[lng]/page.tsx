@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from 'react';
 import { Card } from 'flowbite-react';
-import { Variants, motion } from "framer-motion";
 
 import * as THREE from "three";
 // @ts-ignore
@@ -14,7 +13,7 @@ import CardGrid from "@/ui/CardGrid";
 import { useTranslation } from "@/app/i18n/client";
 
 // dummy type for vanta
-interface VantaEffect { destroy: () => void };
+interface VantaEffect { destroy: () => void }
 
 
 export default function Home({ params }: { params: { lng: string } }) {

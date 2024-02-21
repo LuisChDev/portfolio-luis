@@ -1,4 +1,5 @@
-{
+module.exports = {
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "next/core-web-vitals",
     "plugin:storybook/recommended",

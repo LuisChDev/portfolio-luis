@@ -38,7 +38,7 @@ const Contact = ({ params }: { params: { lng: string; }}) => {
             console.log("the response: ", response);
           });
         })
-        .catch((_response) => {
+        .catch(() => {
           console.log("there was an error");
         });
     },
