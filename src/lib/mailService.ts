@@ -11,7 +11,7 @@ export const sendMail = ({
   toEmail: string;
   otpText: string;
 }) => {
-  let transporter = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
       user: process.env.NODEMAILER_EMAIL,
@@ -19,7 +19,7 @@ export const sendMail = ({
     },
   });
 
-  let mailOptions = {
+  const mailOptions = {
     from: fromEmail || process.env.NODEMAIL_EMAIL,
     to: toEmail,
     subject,

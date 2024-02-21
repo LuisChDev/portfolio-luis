@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import { Card } from 'flowbite-react';
 
 import * as THREE from "three";
-// @ts-ignore
+// @ts-expect-error no types available for vanta
 import GLOBE from 'vanta/dist/vanta.globe.min.js';
 
 import { Gama, Encora, TomorrowTech } from "@/ui/ExperienceCard";
