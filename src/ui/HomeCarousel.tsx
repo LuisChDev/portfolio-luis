@@ -26,7 +26,6 @@ export default function Carousel({
 }: {
   className: string | undefined;
   children: ReactNode;
-  [key: string]: string;
 }) {
   return (
     <BaseCarousel theme={carouselTheme} className={className || ""} {...props}>
