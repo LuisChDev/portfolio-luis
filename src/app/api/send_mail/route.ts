@@ -1,7 +1,7 @@
-import { NextApiRequest } from "next";
 import { sendMail } from "../../../lib/mailService";
+import { NextRequest } from "next/server";
 
-export const GET = async (request: NextApiRequest) => {
+export const GET = async (request: NextRequest) => {
   return new Response(
     `this is a GET request. This is the payload: ${request.body}`,
     {}
