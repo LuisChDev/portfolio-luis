@@ -22,13 +22,15 @@ const carouselTheme: CustomFlowbiteTheme["carousel"] = {
 export default function Carousel({
   className,
   children,
+  slide,
   ...props
 }: {
   className: string | undefined;
   children: ReactNode;
+  slide: boolean;
 }) {
   return (
-    <BaseCarousel theme={carouselTheme} className={className || ""} {...props}>
+    <BaseCarousel theme={carouselTheme} className={className || ""} slide={slide} {...props}>
       {children}
     </BaseCarousel>
   );
