@@ -1,10 +1,12 @@
 "use client";
 
-import { FC, useState, useEffect } from "react";
+import { useTranslation } from "@/app/i18n/client";
+import { useState, useEffect } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
-const AppGame: FC = () => {
+const AppGame = ({ params }: { params: { lng: string; }; }) => {
   const [isLandscape, setIsLandscape] = useState(false);
+  const { t } = useTranslation(params.lng, "game");
   useEffect(() => {
     const handleOrientationChange = () => {
       setIsLandscape(window.innerWidth > window.innerHeight);
@@ -25,27 +27,24 @@ const AppGame: FC = () => {
   return (
     <div className="m-16 w-full h-screen flex flex-col sm:flex-row">
       {isLandscape ? (
-        <Unity className="w-full h-full" unityProvider={unityProvider} />
+        <Unity className="h-1/2 w-2/3"  unityProvider={unityProvider} />
       ) : (
-          <div className="dark:text-stone-200">Please rotate your device to landscape mode.</div>
+          <div className="text-black dark:text-stone-200">
+            {t("landscapeMode")}
+          </div>
       )}
-      <div className="dark:text-stone-200 flex flex-0 flex-col ml-6 mr-6 w-1/4">
+      <div className="text-black dark:text-stone-200 flex flex-0 flex-col ml-6 mr-6 w-1/4">
         {!isLoaded && (
-          <p className="dark:text-stone-200">
+          <p className="text-black dark:text-stone-200">
             Loading... {Math.round(loadingProgression * 100)}%
           </p>
         )}
-        <div className="md:hidden">
-          This div should only show up on phone screens.
-        </div>
         <div className="border-2 border-stone-200 p-2">
-          use WASD to move, the mouse to look around, and left click to swing
-          your hammer. Hold shift to sprint. Try to find and destroy all the
-          bricks! press Return at any time to restart.
+          {t("instructions")}
         </div>
-        <div className="mt-10 border-2 border-stone-200 p-2">
-          total bricks destroyed: 0
-        </div>
+        {/* <div className="mt-10 border-2 border-stone-200 p-2">
+          {`${t("total")} 0`}
+        </div> */}
       </div>
     </div>
   );

@@ -19,13 +19,11 @@ const links: { [key: string]: string } = {
 const AppSidebar: FC = () => {
   const { isSidebarOpen } = useSidebarContext();
   const pathname = usePathname();
-  console.log("the pathname: ", pathname);
 
   const urls = Object.fromEntries(Object.keys(links).map((key) => [
     key,
     (pathname.split("/").length > 2 ? "/" : "") + links[key],
   ]));
-  console.log("current urls: ", urls);
 
   /* isSmallScreen && "-left-16 md:left-0" */
   return (

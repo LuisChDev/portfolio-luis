@@ -80,9 +80,9 @@ export default function CardGrid() {
 
       <SkillCard
         imgSrc={pythonLogo.src}
-        imgAlt="Vue.js Logo"
+        imgAlt="Python Logo"
         bgColor="bg-yellow-300"
-        description="Vue.js"
+        description="Python"
       />
 
       <SkillCard
