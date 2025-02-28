@@ -5,5 +5,7 @@
   "contactSubject": "Asunto",
   "contactMessage": "Su mensaje",
   "contactMessagePlaceholder": "Escriba su mensaje aquí...",
-  "submit": "Enviar"
+  "submit": "Enviar",
+  "success": "Su correo se ha enviado exitosamente.",
+  "error": "Hubo un error enviando su mensaje. Pro favor intente más tarde, o use la información de contacto más abajo."
 }

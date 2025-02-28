@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { Button, Label, Textarea, TextInput } from "flowbite-react";
+import { useRef, useState } from "react";
+import { Button, Label, Textarea, TextInput, Alert } from "flowbite-react";
 import { useFormik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -10,6 +10,9 @@ import { useTranslation } from "@/app/i18n/client";
 const Contact = ({ params }: { params: { lng: string; }}) => {
   const { t } = useTranslation(params.lng, "contact");
   const captchaRef = useRef(null);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
+
   const formik = useFormik({
     initialValues: {
       email1: "",
@@ -27,19 +30,29 @@ const Contact = ({ params }: { params: { lng: string; }}) => {
         },
 
         body: JSON.stringify({
-          subject1,
-          email1,
-          message1,
+          subject: subject1,
+          email: email1,
+          message: message1,
           token
         }),
       })
         .then((response) => {
           response.json().then((response) => {
             console.log("the response: ", response);
+
+            if (response.success) {
+              setSuccess(true);
+              setError(false);
+            } else {
+              setSuccess(false);
+              setError(true);
+            }
           });
         })
-        .catch(() => {
+        .catch((err) => {
           console.log("there was an error");
+
+          setError(JSON.stringify(err));
         });
     },
   });
@@ -101,6 +114,22 @@ const Contact = ({ params }: { params: { lng: string; }}) => {
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "default"}
         />
         <Button type="submit">{t("submit")}</Button>
+
+        {!error ? null :
+         <Alert color="failure">
+           <span className="font-medium">
+             {t("error")}
+           </span>
+         </Alert>
+        }
+
+        {!success ? null :
+         <Alert color="info">
+           <span className="font-medium">
+             {t("success")}
+           </span>
+         </Alert>
+        }
       </form>
     </div>
   );

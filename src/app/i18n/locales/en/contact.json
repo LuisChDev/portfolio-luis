@@ -5,5 +5,7 @@
   "contactSubject": "Subject",
   "contactMessage": "Your Message",
   "contactMessagePlaceholder": "leave your message here...",
-  "submit": "Submit"
+  "submit": "Submit",
+  "success": "Your mail has been sent successfully.",
+  "error": "There was an error sending your message. Please try again later, or use the contact info below."
 }
