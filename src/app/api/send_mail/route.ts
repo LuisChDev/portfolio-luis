@@ -39,7 +39,7 @@ export const POST = async (request: Request) => {
             if (Object.hasOwn(data, 'errors')) {
               return Response.json({
                 success: false,
-                errors: data.errors.map(error => error.message).join(", ")
+                errors: data.errors.map((error: { message: string; }) => error.message).join(", ")
               })
             }
             return Response.json({

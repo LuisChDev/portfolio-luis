@@ -10,7 +10,7 @@ import { useTranslation } from "@/app/i18n/client";
 const Contact = ({ params }: { params: { lng: string; }}) => {
   const { t } = useTranslation(params.lng, "contact");
   const captchaRef = useRef(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const formik = useFormik({
@@ -49,10 +49,11 @@ const Contact = ({ params }: { params: { lng: string; }}) => {
             }
           });
         })
-        .catch((err) => {
+        .catch(() => {
           console.log("there was an error");
 
-          setError(JSON.stringify(err));
+          setError(true);
+          setSuccess(false);
         });
     },
   });
